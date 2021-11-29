@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 21:46:26 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/29 23:03:36 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:47:01 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ unsigned int	ft_putlowhex(unsigned int nb, int *len)
 {
 	char	*s;
 
-	s = "013456789abcdef";
+	s = "0123456789abcdef";
 	if (nb < 16)
 	{
-		ft_putchar(s[nb]);
-		(*len)++;
+		ft_putchar(s[nb], len);
 	}
 	else
 	{
@@ -34,11 +33,10 @@ unsigned int	ft_putuphex(unsigned int nb, int *len)
 {
 	char	*s;
 
-	s = "013456789ABCDEF";
+	s = "0123456789ABCDEF";
 	if (nb < 16)
 	{
-		ft_putchar(s[nb]);
-		(*len)++;
+		ft_putchar(s[nb], len);
 	}
 	else
 	{
@@ -52,11 +50,10 @@ unsigned long	ft_putpointer(unsigned long nb, int *len)
 {
 	char	*s;
 
-	s = "013456789abcdef";
+	s = "0123456789abcdef";
 	if (nb < 16)
 	{
-		ft_putchar(s[nb]);
-		(*len)++;
+		ft_putchar(s[nb], len);
 	}
 	else
 	{

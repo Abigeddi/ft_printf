@@ -6,22 +6,25 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:18:56 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/29 23:00:07 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/30 00:44:29 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s, int *len)
+void	ft_putstr(char *s, int *len)
 {
 	int	i;
 
 	i = 0;
+	if (!s)
+	{
+		*len += write(1, "(null)", 6);
+		return ;
+	}
 	while (s[i])
 	{
-		write (1, &s[i], 1);
-		(*len)++;
+		*len += write (1, &s[i], 1);
 		i++;
 	}
-	return (0);
 }

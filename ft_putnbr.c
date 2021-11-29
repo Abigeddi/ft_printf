@@ -6,7 +6,7 @@
 /*   By: abigeddi <abigeddi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 20:09:47 by abigeddi          #+#    #+#             */
-/*   Updated: 2021/11/29 23:03:58 by abigeddi         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:47:26 by abigeddi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,12 @@ int	ft_putnbr(int n, int *len)
 	nb = n;
 	if (nb < 0)
 	{
-		ft_putchar('-');
+		ft_putchar('-', len);
 		nb *= -1;
-		(*len)++;
 	}
 	if (nb <= 9)
 	{
-		ft_putchar(nb + '0');
-		(*len)++;
+		ft_putchar(nb + '0', len);
 	}
 	else
 	{
